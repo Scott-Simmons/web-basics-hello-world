@@ -15,7 +15,12 @@ $(function() {
    * is clicked and pass it into the click function above...
    * The function should call one of the functions below, and pass the other in as the callback...
    */
+   $("button").click(show_trivia);
 });
+
+function show_trivia() {
+  fetchRandomTriviaQuestion(displayQuestionAndAnswer);
+}
 
 function displayQuestionAndAnswer(question, answer) {
   $("#results-area").text("True or false?");
